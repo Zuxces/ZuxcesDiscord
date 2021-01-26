@@ -1,6 +1,6 @@
 {
-    "ownername": "Zuoers",  
-    "ownercmdfailtext": "what you doing bro❌", 
-    "bugchannelid": "793287552060489749", 
-    "suggestionchannelid": "793287552060489749" 
+    "ownername": "OWNERS-NAME",  
+    "ownercmdfailtext": "ERROR_MESSAGE", 
+    "bugchannelid": "CHANNEL_ID", 
+    "suggestionchannelid": "CHANNEL_ID" 
 }
