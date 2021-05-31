@@ -1,11 +1,19 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+ 
+app.get('/', (req, res) => res.send('Hello World!'));
+ 
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
 
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("guildMemberAdd", member => {
-    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
-    welcomeChannel.send (`Welcome! ${member} hope you have a awesome time in **Discord Bot Server**!`)
+    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === '💬・general')
+    welcomeChannel.send (`Welcome! ${member} hope you have a awesome time in **Chef Duckie Support Server**!`)
 })
 
 require("./util/eventHandler")(bot)
