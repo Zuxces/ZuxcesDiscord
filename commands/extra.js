@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     const embed = new Discord.MessageEmbed()
         .setTitle('Dont click me hehe!')
-        .setURL('https://zuoers.dev/')
+        .setURL('https://dsc.gg/Duckie')
         .setAuthor('Commands are listed below!')
         .setDescription('')
         .setColor('BLACK')
@@ -18,6 +18,12 @@ module.exports.run = async (bot, message, args) => {
             { name: '`embed`', value: 'Test embed command that is all that this is'},
             { name: '`wallpaper`', value: 'Want a awesome anime wallpaper? awesome!'},
             { name: '`cooldown`', value: 'Check if you are still in command cooldown!'},
+            { name: '`serverinfo`', value: 'Check some informaion about the server you are currently in!'},
+            { name: '`serverinvite`', value: 'Sends a invite link to a specific channel!'},
+            { name: '`Support`', value: 'Sends a link to the support server!'},
+            { name: '`setafk`', value: 'Use this if you are planning on going AFK inside a server.'},
+            { name: '`uptime`', value: 'Check how long the discord bot has been up for!'},
+            { name: '`info`', value: 'Sends informaion about Chef Duckie! Such as, member count, server count and uptime!'},
             )
         
         .setTimestamp()
@@ -30,6 +36,6 @@ module.exports.config = {
     name: "extra",
     description: "Some useful commands are found here!",
     usage: "extra",
-    accessableby: "EVERYONE",
+    accessableby: "@everyone",
     aliases: []
 }
