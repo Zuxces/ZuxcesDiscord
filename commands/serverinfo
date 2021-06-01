@@ -1,30 +1,55 @@
 const Discord = require('discord.js');
-exports.run = (client, message) => {
-  const embed = new Discord.RichEmbed()
-  .setAuthor(message.guild.name, message.guild.iconURL)
-  .setColor(3447003)
-  .setDescription(`Owner: ${message.guild.owner.user.tag} (${message.guild.owner.id})`)
-  .addField('Member Count', `${message.guild.memberCount - message.guild.members.filter(m=>m.user.bot).size} (${message.guild.members.filter(m=>m.user.bot).size} bots)`, true)
-  .addField('AFK Timeout', `${message.guild.afkTimeout / 60} minutes`, true)
-  .addField('AFK Channel', `${message.guild.afkChannelID === null ? 'No AFK Channel' : client.channels.get(message.guild.afkChannelID).name} (${message.guild.afkChannelID === null ? '' : message.guild.afkChannelID})`, true)
-  .addField('Location', message.guild.region, true)
-  .addField('Created', message.guild.createdAt.toLocaleString(), true)
-  .addBlankField(true)
-  .setTimestamp()
-  .setFooter(client.user.username, client.user.avatarURL);
 
-  message.channel.send({embed});
-};
+exports.run = (client, message, args) =>{
+    function checkBots(guild) {
+        let botCount = 0;
+        guild.members.cache.forEach(member => {
+            if(member.user.bot) botCount++;
+        });
+        return botCount;
+    }
+    
+    function checkMembers(guild) {
+        let memberCount = 0;
+        guild.members.cache.forEach(member => {
+            if(!member.user.bot) memberCount++;
+        });
+        return memberCount;
+    }
 
-exports.conf = {
-  enabled: true,
-  aliases: ['info','stats','serverstats','guildinfo','guildstats'],
-  permLevel: 0
-};
+    function checkOnlineUsers(guild) {
+        let onlineCount = 0;
+        guild.members.cache.forEach(member => {
+            if(member.user.presence.status === "online")
+                onlineCount++; 
+        });
+        return onlineCount;
+    }
 
-exports.help = {
-  name: 'serverinfo',
-  description: 'Displays server information & statistics',
-  usage: 'serverinfo',
-  category: 'General',
-};
+    let sicon = message.guild.iconURL;
+    let serverembed = new Discord.MessageEmbed()
+        .setAuthor(`${message.guild.name} - Informations`, message.guild.iconURL)
+        .setColor("#15f153")
+        .addField('Server owner', message.guild.owner, true)
+        .addField('Server region', message.guild.region, true)
+        .setThumbnail(sicon)
+        .addField("Server Name", message.guild.name)
+        .addField('Verification level', message.guild.verificationLevel, true)
+        .addField('Channel count', message.guild.channels.cache.size, true)
+        .addField('Total member count', message.guild.memberCount)
+        .addField('Humans', checkMembers(message.guild), true)
+        .addField('Bots', checkBots(message.guild), true)
+        .addField('Online', checkOnlineUsers(message.guild))
+        .setFooter('Guild created at:')
+        .setTimestamp(message.guild.createdAt);
+
+    return message.channel.send(serverembed);
+}
+
+module.exports.config = {
+    name: "serverinfo",
+    description: "Shows Information about the server you're currently in!",
+    usage: "serverinfo",
+    accessableby: "@everyone",
+    aliases: []
+}
