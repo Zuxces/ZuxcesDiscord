@@ -1,7 +1,7 @@
 Load up terminal and do npm i 
 
 once you've done this all the files should start downloading. 
-Do not change Zuoers.js as it will break the bot!
+Do not change Duckie.js as it will break the bot!
 
 If you're having any issues starting the bot then ping me on our support discord server. https://dsc.gg/duckie
 
