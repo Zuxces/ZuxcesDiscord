@@ -19,9 +19,9 @@ module.exports.run = async (bot, message, args) => {
     }
 }
 module.exports.config = {
-    name: "",
-    description: "",
-    usage: "",
-    accessableby: "EVERYONE",
-    aliases: []
+    name: "avatar",
+    description: "Check a users avatar",
+    usage: "avatar",
+    accessableby: "@EVERYONE",
+    aliases: ["a"]
 }

@@ -3,12 +3,12 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     const embed = new Discord.MessageEmbed()
         .setTitle('Dont click me hehe!')
-        .setURL('https://zuoers.dev/')
+        .setURL('https://dsc.gg/Duckie')
         .setAuthor('Commands are listed below!')
         .setDescription('')
-        .setColor('BLACK')
+        .setColor('YELLOW')
         .setThumbnail('')
-        .setImage('https://cdn.nekos.life/wallpaper/yYYxeO0sRWw.png')
+        .setImage('https://cdn.discordapp.com/attachments/721766902426370189/849649776759930930/ChefDuckiePromote.gif')
         .setFooter('Feel free to join the support server!')
         .addFields(
             { name: '`Cuddle`', value: 'Cuddle someone to death uwu',inline: true},

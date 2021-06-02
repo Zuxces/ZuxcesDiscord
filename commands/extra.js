@@ -6,9 +6,9 @@ module.exports.run = async (bot, message, args) => {
         .setURL('https://dsc.gg/Duckie')
         .setAuthor('Commands are listed below!')
         .setDescription('')
-        .setColor('BLACK')
+        .setColor('YELLOW')
         .setThumbnail('')
-        .setImage('')
+        .setImage('https://cdn.discordapp.com/attachments/721766902426370189/849649776759930930/ChefDuckiePromote.gif')
         .setFooter('Feel free to join the support server!')
         .addFields(
             { name: '`memberinfo`', value: 'Check out someones info!',inline: true},

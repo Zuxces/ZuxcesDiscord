@@ -35,7 +35,7 @@ module.exports = {
 }
 
 module.exports.config = {
-    name: roleinfo",
+    name: "roleinfo",
     description: "Check a roles information using this command",
     usage: "roleinfo",
     accessableby: "@everyone",

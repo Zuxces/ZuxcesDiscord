@@ -3,12 +3,12 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     const embed = new Discord.MessageEmbed()
         .setTitle('Dont click me hehe!')
-        .setURL('https://zuoers.dev/')
+        .setURL('https://dsc.gg/Duckie')
         .setAuthor('Commands are listed below!')
-        .setDescription('')
-        .setColor('BLACK')
+        .setDescription('Keep in mind you need moderation perms!')
+        .setColor('YELLOW')
         .setThumbnail('https://cdn.discordapp.com/emojis/780476171472732180.gif?v=1')
-        .setImage('https://cdn.nekos.life/wallpaper/fkKJ-yzmuVc.png')
+        .setImage('https://cdn.discordapp.com/attachments/721766902426370189/849649776759930930/ChefDuckiePromote.gif')
         .setFooter('Feel free to join the support server!')
         .addFields(
             { name: '`warn`', value: 'warn a user for being naughty!',inline: true},
@@ -20,6 +20,7 @@ module.exports.run = async (bot, message, args) => {
             { name: '`addrole`', value: 'Add a role to someone!'},
             { name: '`mute`', value: 'Mute someone for being annoying!'},
             { name: '`unmute`', value: 'If someone is muted and you want to unmute someone use this!'},
+            { name: '`slowmode`', value: 'Change the slowmode using this command!'},
         )
         .setTimestamp()
 
