@@ -1,8 +1,12 @@
-Once you've downloaded make sure to run 
+Load up terminal and do npm i 
 
-npm i 
+once you've done this all the files should start downloading. 
+Do not change Zuoers.js as it will break the bot!
 
-to install everything needed to run the bot!
+If you're having any issues starting the bot then ping me on our support discord server. https://dsc.gg/duckie
 
-Hello, my name is Zuoers! I've made this bot so people who cant really make discord bots or struggle to start one off are able to use this open source code and customise 
-it to there liking! I ask of 1 thing if you do use this project and please join my discord server! Link can be found on my website https://zuoers.dev/
+However instead of hosting the bot for yourself why not just invite the bot! https://dsc.gg/ChefDuckie
+
+Anyways once you've downloaded everything needed ete just run node Zuoers.js and the bot should load as long as you done everything correct!
+
+Go to botsettings.json and fill out your bot token and prefix also! Or else the bot wont work for sure xD
