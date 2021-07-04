@@ -1,12 +1,12 @@
 {
-  "name": "Zuoers",
+  "name": "Zuxces",
   "version": "1.0.0",
-  "main": "Duckie.js",
+  "main": "Zuxces.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Zuxces",
   "license": "ISC",
   "dependencies": {
     "dateformat": "^4.5.1",
@@ -22,5 +22,5 @@
     "random-puppy": "^1.1.0",
     "superagent": "^6.1.0"
   },
-  "description": ""
+  "description": "Zuxces' Discord Bot! Made with JavaScript (js), this is open source so feel free to use whatever!"
 }
