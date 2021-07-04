@@ -14,6 +14,8 @@ If you're having any issues starting the bot then ping me on our support discord
 
 However instead of hosting the bot for yourself why not just invite the bot! https://dsc.gg/Zuxces
 
-Anyways once you've downloaded everything needed ete just run node Zuoers.js and the bot should load as long as you done everything correct!
+Anyways once you've downloaded everything needed ete just run node Zuxces.js or npm start and the bot should load as long as you done everything correct!
 
 Go to botsettings.json and fill out your bot token and prefix also! Or else the bot wont work for sure xD
+
+If you have any problems, feel free to join our Discord Server! https://dsc.gg/Zuxces
